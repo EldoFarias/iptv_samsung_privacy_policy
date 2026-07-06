@@ -5,63 +5,88 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Privacy Policy — ODLE IPTV</title>
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 800px; margin: 40px auto; padding: 0 24px; color: #222; line-height: 1.7; }
-    h1 { font-size: 28px; color: #E50914; margin-bottom: 4px; }
-    h2 { font-size: 18px; margin-top: 32px; color: #111; }
-    h3 { font-size: 15px; color: #333; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 820px; margin: 40px auto; padding: 0 24px; color: #222; line-height: 1.7; }
+    h1 { font-size: 28px; color: #1a8a3a; margin-bottom: 4px; }
+    h2 { font-size: 18px; margin-top: 36px; color: #111; border-bottom: 1px solid #eee; padding-bottom: 6px; }
+    h3 { font-size: 15px; color: #333; margin-top: 20px; }
     p, li { font-size: 15px; }
     .meta { font-size: 13px; color: #666; margin-bottom: 32px; }
+    .platforms { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .platform-badge { background: #f0f0f0; border: 1px solid #ddd; border-radius: 20px; padding: 4px 14px; font-size: 13px; color: #444; }
     hr { border: none; border-top: 1px solid #eee; margin: 32px 0; }
     table { border-collapse: collapse; width: 100%; margin: 16px 0; }
     th, td { border: 1px solid #ddd; padding: 10px 14px; font-size: 14px; text-align: left; }
     th { background: #f5f5f5; }
-    a { color: #E50914; }
+    a { color: #1a8a3a; }
+    .storage-note { background: #f9f9f9; border-left: 3px solid #1a8a3a; padding: 10px 16px; margin: 12px 0; font-size: 14px; }
+    @media (max-width: 600px) { body { margin: 20px auto; } h1 { font-size: 22px; } }
   </style>
 </head>
 <body>
 
 <h1>Privacy Policy — ODLE IPTV</h1>
-<p class="meta">Last updated: June 4, 2026 &nbsp;|&nbsp; Developer: ODLE Streaming &nbsp;|&nbsp; Contact: <a href="mailto:eldofarias81@outlook.com">eldofarias81@outlook.com</a></p>
+<p class="meta">Last updated: July 6, 2026 &nbsp;|&nbsp; Developer: ODLE Streaming &nbsp;|&nbsp; Contact: <a href="mailto:eldofarias81@outlook.com">eldofarias81@outlook.com</a></p>
+
+<p>This Privacy Policy applies to all versions of the <strong>ODLE IPTV</strong> application, available on the following platforms:</p>
+<div class="platforms">
+  <span class="platform-badge">📺 Samsung Smart TV (Tizen)</span>
+  <span class="platform-badge">📺 Roku</span>
+  <span class="platform-badge">📱 Android / Android TV</span>
+  <span class="platform-badge">📺 LG Smart TV (webOS)</span>
+  <span class="platform-badge">🖥️ Windows</span>
+</div>
 
 <hr/>
 
 <h2>1. Introduction</h2>
-<p>ODLE IPTV ("the App") is a media streaming application developed by ODLE Streaming for Samsung Smart TV (Tizen platform). This Privacy Policy explains what information we collect, how we use it, and your rights regarding that information.</p>
-<p>By using the App, you agree to the practices described in this policy.</p>
+<p>ODLE IPTV ("the App") is a media player application developed by ODLE Streaming that allows users to watch IPTV content from playlists they configure themselves. This Privacy Policy explains what information we collect, how we use it, and your rights regarding that information.</p>
+<p>By using the App on any supported platform, you agree to the practices described in this policy.</p>
 
 <h2>2. Information We Collect</h2>
-<h3>2.1 Device Information</h3>
-<p>To generate a unique license identifier and verify your subscription, the App reads:</p>
-<ul>
-  <li><strong>Device Unique ID (DUID):</strong> a hardware identifier provided by Samsung Tizen firmware. This value does not change across reinstalls and is used solely to bind your license to your device.</li>
-  <li><strong>Network MAC address:</strong> used as a secondary device identifier for license verification.</li>
-</ul>
+
+<h3>2.1 Device Identifier</h3>
+<p>To generate a unique license key and verify your subscription, the App reads a hardware identifier from your device. The method varies by platform:</p>
+<table>
+  <tr><th>Platform</th><th>Identifier Used</th></tr>
+  <tr><td>Samsung Smart TV (Tizen)</td><td>Device Unique ID (DUID) provided by the Tizen firmware</td></tr>
+  <tr><td>Roku</td><td>Device Unique Service ID provided by the Roku OS</td></tr>
+  <tr><td>Android / Android TV</td><td>Android ID or hardware fingerprint</td></tr>
+  <tr><td>LG Smart TV (webOS)</td><td>Device serial or MAC address provided by webOS</td></tr>
+  <tr><td>Windows</td><td>Hardware fingerprint (CPU, screen, browser agent)</td></tr>
+</table>
+<p>These identifiers do not change across reinstalls and are used solely to bind your license to your device. A logical MAC address derived from the same identifier is also used as a secondary license reference.</p>
 
 <h3>2.2 Subscription and Activation Data</h3>
 <p>When you activate a license or subscription, the following data is sent to our servers:</p>
 <ul>
-  <li>Device ID (DUID)</li>
+  <li>Device identifier (as described above)</li>
+  <li>Logical MAC address</li>
   <li>App version</li>
   <li>Activation code (if provided by a reseller)</li>
+  <li>Email address (only if you choose to pay via PIX and voluntarily provide it for a receipt)</li>
 </ul>
-<p>We do <strong>not</strong> collect your name, email address, or payment information directly. Payments are processed by third-party services and are subject to their own privacy policies.</p>
+<p>We do <strong>not</strong> collect your name or payment card information directly. Payments are processed by third-party services (e.g., Mercado Pago) and are subject to their own privacy policies.</p>
 
 <h3>2.3 Playlist and Content Data</h3>
+<div class="storage-note">
+  Playlist URLs and credentials are stored <strong>locally on your device only</strong> and are never transmitted to our servers.
+</div>
 <ul>
-  <li>M3U playlist URLs and Xtream Codes credentials entered by the user are stored <strong>locally on the device only</strong> (Samsung Tizen localStorage).</li>
-  <li>We do not transmit your playlist URLs, credentials, or viewing history to our servers.</li>
-  <li>Content metadata (channel names, movie posters) is fetched from the URLs you provide and cached locally on your device.</li>
+  <li>M3U playlist URLs and Xtream Codes credentials (host, username, password) entered by the user are stored locally on the device using the platform's native storage (e.g., local file cache, app registry, or localStorage).</li>
+  <li>We do not transmit your playlist URLs, credentials, channel lists, or viewing history to our servers.</li>
+  <li>Content metadata (channel names, movie posters, EPG data) is fetched from URLs you provide and cached locally on your device.</li>
 </ul>
 
 <h3>2.4 Usage Data</h3>
-<p>We do <strong>not</strong> collect analytics, crash reports, or usage telemetry. The App does not include any third-party analytics SDK.</p>
+<p>We do <strong>not</strong> collect analytics, crash reports, or usage telemetry. The App does not include any third-party analytics SDK on any platform.</p>
 
 <h2>3. How We Use the Information</h2>
 <table>
   <tr><th>Data</th><th>Purpose</th></tr>
-  <tr><td>Device ID (DUID)</td><td>License verification and binding</td></tr>
-  <tr><td>MAC address</td><td>Secondary license identifier</td></tr>
+  <tr><td>Device identifier</td><td>License verification and binding to device</td></tr>
+  <tr><td>Logical MAC address</td><td>Secondary license identifier</td></tr>
   <tr><td>Activation code</td><td>Reseller license validation</td></tr>
+  <tr><td>Email address (optional)</td><td>Sending PIX payment receipt only</td></tr>
 </table>
 <p>All collected data is used exclusively for license management. We do not sell, rent, or share your data with third parties except as required by law.</p>
 
@@ -69,23 +94,32 @@
 <ul>
   <li>Device identifiers are stored on our servers only for the duration of your active license.</li>
   <li>Playlist URLs and credentials are stored <strong>locally on your device</strong> and never transmitted to us.</li>
-  <li>Communication between the App and our license servers uses HTTPS.</li>
+  <li>All communication between the App and our license servers uses HTTPS (TLS 1.2+).</li>
+  <li>Upon license expiration or deletion request, your device record is removed from our servers.</li>
 </ul>
 
 <h2>5. Third-Party Services</h2>
-<p>The App may load content (images, streams) from URLs provided by the user. These URLs point to third-party IPTV servers that are not operated by ODLE Streaming. We are not responsible for the privacy practices of these servers.</p>
+<p>The App may interact with the following third-party services:</p>
+<ul>
+  <li><strong>TMDB (The Movie Database):</strong> used to fetch movie and series metadata (titles, posters, descriptions). See <a href="https://www.themoviedb.org/privacy-policy" target="_blank" rel="noopener noreferrer">TMDB Privacy Policy</a>.</li>
+  <li><strong>Mercado Pago:</strong> used for PIX payment processing. See <a href="https://www.mercadopago.com.br/privacidade" target="_blank" rel="noopener noreferrer">Mercado Pago Privacy Policy</a>.</li>
+  <li><strong>User-provided IPTV servers:</strong> the App loads streams and metadata from URLs provided by the user. These servers are not operated by ODLE Streaming and we are not responsible for their privacy practices.</li>
+</ul>
 
 <h2>6. Children's Privacy</h2>
-<p>The App is not directed at children under the age of 13. We do not knowingly collect personal information from children.</p>
+<p>The App is not directed at children under the age of 13. We do not knowingly collect personal information from children. If you believe a child has provided personal information to us, please contact us and we will delete it promptly.</p>
 
 <h2>7. Your Rights</h2>
-<p>You may request deletion of your device's license record from our servers by contacting us at <a href="mailto:eldofarias81@outlook.com">eldofarias81@outlook.com</a>. Upon deletion, your license will be deactivated.</p>
+<p>You may request deletion of your device's license record from our servers at any time by contacting us at <a href="mailto:eldofarias81@outlook.com">eldofarias81@outlook.com</a>. Upon deletion, your license will be deactivated and all associated data removed from our servers.</p>
 
 <h2>8. Changes to This Policy</h2>
-<p>We may update this Privacy Policy from time to time. We will notify users by updating the "Last updated" date above. Continued use of the App after changes constitutes acceptance of the updated policy.</p>
+<p>We may update this Privacy Policy from time to time to reflect new platforms or changes in our practices. We will notify users by updating the "Last updated" date at the top of this page. Continued use of the App after changes constitutes acceptance of the updated policy.</p>
 
 <h2>9. Contact</h2>
-<p>ODLE Streaming<br/>Email: <a href="mailto:eldofarias81@outlook.com">eldofarias81@outlook.com</a></p>
+<p>
+  ODLE Streaming<br/>
+  Email: <a href="mailto:eldofarias81@outlook.com">eldofarias81@outlook.com</a>
+</p>
 
 </body>
 </html>
